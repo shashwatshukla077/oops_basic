@@ -1,4 +1,4 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 void insert(string *p,int n){
 	int i, k=0;
@@ -33,20 +33,23 @@ int main(){
 	cout<<"3)print names"<<'\n';
 	cout<<"0)To end Program"<<'\n';
 	cin>>ch;
-	switch(ch){
-		case 1:cout<<"enter how many names u wanna enter";
-		 cin>>n;
+		if(ch==1)
+		{
+			cout<<"enter how many names u wanna enter";
+			 cin>>n;
 			insert(a,n);
-		break;
-		case 2:cout<<"enter index u wanna delete";
-		 cin>>m;
+		}
+		else if(ch==2)
+		{
+			cout<<"enter index u wanna delete";
+		 	cin>>m;
 			deletename(a,n,m);
 			n=n-1;
-		break;
-		case 3: print(a);
-				break;
-//		case3: print();
-	}
+		}
+		else if(ch==3)
+		{
+			print(a);
+		}
 }
 
 }
